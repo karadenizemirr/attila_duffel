@@ -31,7 +31,7 @@ export default function NavbarComponent() {
     return (
         <div className="container mx-auto p-4 grid grid-cols-12 items-center" >
             <div className="col-span-6 sm:col-span-3">
-                <Image src="/images/logo.png" width={100} height={100} alt="logo" />
+                <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413570/xfj2twvsxszkw9mbsimt.png" width={100} height={100} alt="logo" />
             </div>
             <div className="col-span-6 hidden sm:flex flex-1 justify-center items-center">
                 <ul className="flex flex-1 justify-center items-center gap-10" >

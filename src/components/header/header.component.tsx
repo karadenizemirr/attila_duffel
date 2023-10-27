@@ -6,7 +6,7 @@ export default function HeaderComponent() {
     return (
         <div className="p-2 md:w-100 h-[70vh] relative overflow-hidden shadow-2xl container mx-auto mt-5" >
             <div className="bg-image">
-                <Image src="/images/hero.jpg" alt="hero" layout="fill" objectFit="cover" className="rounded-2xl" quality={70} />
+                <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413584/pzezioz8efhaq3fgnknn.jpg" alt="hero" layout="fill" objectFit="cover" className="rounded-2xl" quality={70} />
             </div>
             <div className="flex items-center justify-center h-full container mx-auto overflow-hidden" >
                 <section className="grid grid-col-12 md:grid-cols-12 items-center absolute gap-10 p-3" >

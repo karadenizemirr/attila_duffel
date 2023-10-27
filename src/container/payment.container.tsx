@@ -72,10 +72,10 @@ export default function PaymentContainer() {
                         />
                     </div>
                     <div className="logo flex flex-1 justify-around mt-5">
-                        <Image src="/images/icons/stripe.svg" width={110} height={50} alt="stripe" />
-                        <Image src="/images/icons/duffel.svg" width={110} height={50} alt="stripe" />
-                        <Image src="/images/icons/visa.svg" width={90} height={50} alt="stripe" />
-                        <Image src="/images/icons/mastercard.svg" width={60} height={50} alt="stripe" />
+                        <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413633/smmox3wvfb5srks5kdlf.svg" width={110} height={50} alt="stripe" />
+                        <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413630/rgf5wgsaf4dq4ktf8daq.svg" width={110} height={50} alt="stripe" />
+                        <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413634/tz5o1opcjn6kvik7vkfl.svg" width={90} height={50} alt="stripe" />
+                        <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413631/brvkoxsme9eyyzkg5s2d.svg" width={60} height={50} alt="stripe" />
                     </div>
                 </div>
 

@@ -6,8 +6,8 @@ export default function FooterComponent(){
         <div className="bg-black text-primary h-28 flex flex-1 items-center justify-center" >
             <div className="content text-center">
                 <div className="social flex flex-1 gap-3 mb-5 items-center justify-center">
-                    <Image src='/images/icons/facebook.png' width={20} height={20} alt="facebook" />
-                    <Image src='/images/icons/instagram.png' width={20} height={20} alt="facebook" />
+                    <Image src='https://res.cloudinary.com/dssep9ze1/image/upload/v1698413630/ykyvuuw91zza3ycvauoq.png' width={20} height={20} alt="facebook" />
+                    <Image src='https://res.cloudinary.com/dssep9ze1/image/upload/v1698413631/vpgomrsuspxe6gv36nhm.png' width={20} height={20} alt="facebook" />
                 </div>
                 <div className="text">
                     <p>

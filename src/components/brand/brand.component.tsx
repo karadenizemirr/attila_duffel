@@ -11,40 +11,40 @@ export default function BrandComponent() {
             </div>
             <div className="grid grid-cols-12 md:gap-10" >
                 <div className="image-card relative border p-2 rounded-lg shadow-sm h-20 md:col-span-2 col-span-6 ">
-                    <Image src="/images/icons/turkishairlines.svg" layout="fill" objectFit="fill" alt="brand" />
+                    <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413633/rkgmxqfnru7kvnqy6vkw.svg" layout="fill" objectFit="fill" alt="brand" />
                 </div>
                 <div className="image-card relative border p-2 rounded-lg shadow-sm h-20 md:col-span-2 col-span-6">
-                    <Image src="/images/icons/britishairways.svg" layout="fill" objectFit="fill" alt="brand" />
+                    <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413632/ckdzhc4s5glbrbypz6op.svg" layout="fill" objectFit="fill" alt="brand" />
                 </div>
                 <div className="image-card relative border p-2 rounded-lg shadow-sm h-20 md:col-span-2 col-span-6">
-                    <Image src="/images/icons/lufthansa.svg" layout="fill" objectFit="fill" alt="brand" />
+                    <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413631/lsx6b8d0ckop9gyzxujr.svg" layout="fill" objectFit="fill" alt="brand" />
                 </div>
                 <div className="image-card relative border p-2 rounded-lg shadow-sm h-20 md:col-span-2 col-span-6">
-                    <Image src="/images/icons/airfrance.svg" layout="fill" objectFit="fill" alt="brand" />
+                    <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413629/frneg6tfl7iy0ouqrrl4.svg" layout="fill" objectFit="fill" alt="brand" />
                 </div>
                 <div className="image-card relative border p-2 rounded-lg shadow-sm h-20 md:col-span-2 col-span-6">
-                    <Image src="/images/icons/ryanair.svg" layout="fill" objectFit="fill" alt="brand" />
+                    <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413632/q4xfva827ctkc1jhbjwl.svg" layout="fill" objectFit="fill" alt="brand" />
                 </div>
                 <div className="image-card relative border p-2 rounded-lg shadow-sm h-20 md:col-span-2 col-span-6">
-                    <Image src="/images/icons/easyjet.svg" layout="fill" objectFit="fill" alt="brand" />
+                    <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413630/o4g3ci6mlpzccawgpls6.svg" layout="fill" objectFit="fill" alt="brand" />
                 </div>
                 <div className="image-card relative border p-2 rounded-lg shadow-sm h-20 md:col-span-2 col-span-6">
-                    <Image src="/images/icons/tapairportugal.svg" layout="fill" objectFit="fill" alt="brand" />
+                    <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413633/e6xwkotckxezjrnnydbv.svg" layout="fill" objectFit="fill" alt="brand" />
                 </div>
                 <div className="image-card relative border p-2 rounded-lg shadow-sm h-20 md:col-span-2 col-span-6">
-                    <Image src="/images/icons/klm.svg" layout="fill" objectFit="fill" alt="brand" />
+                    <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413631/zkborgpqa9ylxmskmoam.svg" layout="fill" objectFit="fill" alt="brand" />
                 </div>
                 <div className="image-card relative border p-2 rounded-lg shadow-sm h-20 md:col-span-2 col-span-6">
-                    <Image src="/images/icons/pegasusairlines.svg" layout="fill" objectFit="fill" alt="brand" />
+                    <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413631/oiogdsgdfvzkmsnykvmt.svg" layout="fill" objectFit="fill" alt="brand" />
                 </div>
                 <div className="image-card relative border p-2 rounded-lg shadow-sm h-20 md:col-span-2 col-span-6">
-                    <Image src="/images/icons/sasbraathens.svg" layout="fill" objectFit="fill" alt="brand" />
+                    <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413629/cp4nutn95kciawrhay5l.svg" layout="fill" objectFit="fill" alt="brand" />
                 </div>
                 <div className="image-card relative border p-2 rounded-lg shadow-sm h-20 md:col-span-2 col-span-6">
-                    <Image src="/images/icons/finnair.svg" layout="fill" objectFit="fill" alt="brand" />
+                    <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413630/fpmmx8qot55ya9gsxj7g.svg" layout="fill" objectFit="fill" alt="brand" />
                 </div>
                 <div className="image-card relative border p-2 rounded-lg shadow-sm h-20 md:col-span-2 col-span-6">
-                    <Image src="/images/icons/loganair.svg" layout="fill" objectFit="fill" alt="brand" />
+                    <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413633/vvk0mdpyfbilrozcx3pm.svg" layout="fill" objectFit="fill" alt="brand" />
                 </div>
             </div>
         </div>
