@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 export default function RegisterContainer(){
     return (
         <div className="flex flex-1 justify-center items-center mt-10 h-[70vh]" >
-            <div className="register-card w-1/2 border p-5">
+            <div className="register-card w-full md:w-1/2 border p-5">
                 <div className="title text-center">
                     <h1 className="text-3xl" >
                         Register <span className="text-secondary italic" >Now</span>

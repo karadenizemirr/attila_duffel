@@ -17,7 +17,7 @@ export default function ModalComponent() {
     return (
         showModal && (
             <>
-                <div className="modal absolute top-0 w-1/3">
+                <div className="modal absolute top-0 w-full md:w-1/3">
                     <div className="modal-card instagramColor text-white h-[30vh] shadow-2xl p-3 rounded-2xl flex flex-1 items-center justify-center animate__animated animate__backInDown">
 
                         <div className="content text-center">

@@ -13,7 +13,7 @@ export default function QueryTicketComponent() {
             </div>
             <div className="form mt-10 flex flex-1 items-center justify-center">
                 <Formik initialValues={{}} onSubmit={() => { }} >
-                    <Form className="w-1/3" >
+                    <Form className="w-full md:w-1/3" >
                         <div className="row flex gap-2">
                             <Field name="offerId" placeholder="Ticket Code" component={InoutComponent} />
                             <button className="p-1.5 border border-black rounded-lg hover:bg-black hover:text-white duration-200" >Search</button>
