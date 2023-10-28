@@ -2,8 +2,10 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
 import InoutComponent from "../form/input";
+import { useRouter } from "next/navigation";
 
 export default function QueryTicketComponent() {
+    const router = useRouter()
     return (
         <div className="container mx-auto mt-32 mb-20" >
             <div className="title text-center">
@@ -12,7 +14,9 @@ export default function QueryTicketComponent() {
                 </h1>
             </div>
             <div className="form mt-10 flex flex-1 items-center justify-center">
-                <Formik initialValues={{}} onSubmit={() => { }} >
+                <Formik initialValues={{}} onSubmit={(values:any) => {
+                    router.push('/order/detail/' + values.offerId)
+                }} >
                     <Form className="w-full md:w-1/3" >
                         <div className="row flex gap-2">
                             <Field name="offerId" placeholder="Ticket Code" component={InoutComponent} />

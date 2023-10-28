@@ -1,11 +1,12 @@
 "use client"
 import { store } from "@/redux";
-import React from "react";
+import React, { useEffect } from "react";
 import { DuffelPayments } from '@duffel/components'
 import { fetchPayment } from "@/redux/store/payment.state";
 import { toast } from "react-toastify";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
+import { redirect, useRouter } from "next/navigation";
 
 
 export default function PaymentContainer() {
@@ -14,10 +15,18 @@ export default function PaymentContainer() {
     const cli_token: any = checkout.paymentIntent?.data?.client_token || ""
 
     const [paymentStatus, setPaymentStatus] = React.useState<boolean>(false)
+    const [orderId, setOrderId] = React.useState<string>("")
 
     const { data: session }: { data: any } = useSession()
     const userId = session?.user?.id
 
+    useEffect(() => {
+        setOrderId(state.payment.orderId)
+
+        if (orderId){
+            redirect('/order/detail/' + orderId)
+        }
+    })
     return (
         <div className="container mx-auto" >
             <div className="payment-card w-full h-[70vh] flex items-center justify-center">
@@ -29,7 +38,6 @@ export default function PaymentContainer() {
                         <DuffelPayments
                             paymentIntentClientToken={cli_token}
                             onSuccessfulPayment={() => {
-                                toast.success('Payment Success')
                                 setPaymentStatus(true)
 
                                 const data = {
@@ -61,10 +69,13 @@ export default function PaymentContainer() {
                                     hideProgressBar: false,
                                     closeOnClick: true,
                                     pauseOnHover: false,
-                                    draggable: false,
+                                    draggable: true,
                                 })
-
+                                toast.loading('Plase wait', {
+                                    position: 'top-center'
+                                })
                             }}
+
                             onFailedPayment={(err: any) => {
                                 toast.error('Payment Failed')
                                 setPaymentStatus(false)

@@ -4,6 +4,7 @@ import { fetchIsCancel } from "@/redux/store/operations.state";
 import Image from "next/image";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
+import html2pdf from 'html2pdf.js'
 
 export default function OrderDetailContainer({order}: {order: any }) {
     const handleIsCancel = () => {
@@ -18,18 +19,26 @@ export default function OrderDetailContainer({order}: {order: any }) {
         }
     }, [isCancel])
 
+    
+    const handleDownloadPDF = () => {
+        const element = document.getElementById('orderDetailContainer')
+        html2pdf()
+            .from(element)
+            .save('orderPass.pdf')
+    }
+
     return (
-        <div className="orderDetailContainer flex flex-1 justify-center mt-10">
+        <div className="orderDetailContainer flex flex-1 justify-center mt-10" id="orderDetailContainer">
             <div className="col w-2/3 bg-gray-100 p-4 rounded-lg">
                 <div className="topbar flex flex-1 justify-between">
                     <h1 className="text-2xl uppercase" >
                         {order.booking_reference}
                     </h1>
                     <div className="menu">
-                        <button className="bg-red-500 text-white p-2 rounded-lg text-sm  mr-2" onClick={handleIsCancel} >
+                        {/* <button className="bg-red-500 text-white p-2 rounded-lg text-sm  mr-2" onClick={handleIsCancel} >
                             Cancel Ticket
-                        </button>
-                        <button className="bg-black text-white p-2 rounded-lg text-sm" >
+                        </button> */}
+                        <button className="bg-black text-white p-2 rounded-lg text-sm" onClick={handleDownloadPDF} >
                             Download Ticket
                         </button>
 
@@ -66,10 +75,10 @@ export default function OrderDetailContainer({order}: {order: any }) {
                             order.slices.map((item: any, index: number) => (
                                 <div key={index} className="flex flex-col items-center mt-2 gap-4" >
                                     <span>
-                                        Origin: {item.origin.name} - {item.segments[index].arrival_datetime}
+                                         Origin: <span className="text-sm text-gray-400 italic" >{item.origin.name} - {item.segments[index].arrival_datetime}</span>
                                     </span>
                                     <span>
-                                        Destination: {item.destination.name} - {item.segments[index].departure_datetime}
+                                        Destination: <span className="text-sm text-gray-400 italic" >{item.destination.name} - {item.segments[index].departure_datetime}</span>
                                     </span>
                                 </div>
                             ))
@@ -133,44 +142,56 @@ export default function OrderDetailContainer({order}: {order: any }) {
                         </h2>
                         <div className="relative overflow-x-auto">
                             <table className="w-full text-sm text-left text-gray-500 ">
-                                <thead className="text-xs text-gray-700 uppercase ">
-                                    <tr>
-                                        <th scope="col" className="px-6 py-3">
-                                            Currency
-                                        </th>
-                                        <th scope="col" className="px-6 py-3">
-                                            Base Amount
-                                        </th>
-                                        <th scope="col" className="px-6 py-3">
-                                            Tax Amount
-                                        </th>
-                                        <th scope="col" className="px-6 py-3">
-                                            Total Amount
-                                        </th>
-                                        <th scope="col" className="px-6 py-3">
-                                            Status
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr className="bg-white border-b  ">
-                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                            {order.base_currency}
-                                        </th>
-                                        <td className="px-6 py-4">
-                                            {order.base_amount}
-                                        </td>
-                                        <td className="px-6 py-4">
-                                            {order.tax_amount}
-                                        </td>
-                                        <td className="px-6 py-4">
-                                            {order.total_amount}
-                                        </td>
-                                        <td>
-                                            {!order.payment_status.awaiting_payment ? 'Confirmed' : 'Not Confirmed'}
-                                        </td>
-                                    </tr>
-                                </tbody>
+                            <table className="w-full text-sm text-gray-500 text-center ">
+                                    <thead className="text-xs text-gray-700 uppercase ">
+                                        <tr>
+                                            <th scope="col" className="px-6 py-3">
+                                                Currency
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Base Amount
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Tax Amount
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Fee Amount
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Total Amount
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Payment Status
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr className="bg-white border-b text-center  ">
+                                            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                                {order.base_currency}
+                                            </th>
+                                            <td className="px-6 py-4">
+                                                {order.base_amount}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                {order.tax_amount}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                2.9%
+                                            </td>
+                                            <td className="font-bold italic" >
+                                                {
+                                                    ((order.total_amount + 10) / (1 - 0.029)).toFixed(2)
+                                                }
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                {
+                                                    !order.payment_status.awaiting_payment ? "Confirmed" : "Awaiting Payment"
+                                                }
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </table>
                         </div>
                     </div>
@@ -179,3 +200,5 @@ export default function OrderDetailContainer({order}: {order: any }) {
         </div>
     )
 }
+
+

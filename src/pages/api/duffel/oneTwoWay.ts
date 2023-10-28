@@ -23,9 +23,8 @@ export default async function POST(req:NextApiRequest, res:NextApiResponse){
                 }
             ],
             passengers:passengers,
-            cabin_class: data.class_type
+            cabin_class: data.class_type,
         })
-
         return res.status(200).json({ok: true, id: offerRequest.data.id})
     }catch(err){
 

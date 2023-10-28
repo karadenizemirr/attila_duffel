@@ -6,7 +6,6 @@ import { toast } from "react-toastify";
 
 export default function OffersContainer({ data }: { data?: any }) {
     const [spinner, setSpinner] = useState<number>();
-
     useEffect(() => {
         if (spinner && spinner >= 0){
             toast.success("Offer selected", {
@@ -21,7 +20,7 @@ export default function OffersContainer({ data }: { data?: any }) {
                     Results
                 </h1>
             </div>
-            <div className="grid grid-cols-12 mt-10">
+            <div className="mt-10 text-center flex flex-col items-center justify-center">
                 {
                     data?.map((item: any, index: number) => (
                         <OfferCardComponent key={index} item={item}>

@@ -9,7 +9,9 @@ export default async function GET(req:NextApiRequest, res:NextApiResponse){
 
         const {data} = await duffel.offers.list({
             offer_request_id: id as string,
-            limit: 200
+            limit: 100,
+            sort: 'total_amount',
+            
         })
         return res.status(200).json({ok: true, data:data})
 

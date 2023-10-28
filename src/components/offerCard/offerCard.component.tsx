@@ -1,5 +1,6 @@
 import { dateParser } from "@/lib/parser";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 export default function OfferCardComponent({ item, children }: { item: any, children?:React.ReactNode }) {
@@ -17,7 +18,7 @@ export default function OfferCardComponent({ item, children }: { item: any, chil
     const return_parseArrivingDate: any = dateParser(return_arriving_date)||''
 
     return (
-        <div className=" col-span-12 md:col-span-4 p-3" >
+        <div className="w-full md:w-4/5 p-3" >
             <div className="result-card border border-silver p-3 rounded-xl shadow-sm relative ">
                 <div className="row flex flex-1 items-center justify-between">
                     <div className="info flex flex-1 gap-3 items-center">

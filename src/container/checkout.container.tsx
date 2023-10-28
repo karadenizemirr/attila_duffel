@@ -12,25 +12,25 @@ import React from "react";
 export default function CheckoutContainer() {
     const state: any = store.getState()
     const router = useRouter();
+    const offerData = state.checkout.offerData
 
     return (
-        <div className="container mx-auto flex flex-1 justify-center mt-10 mb-10" >
-            <div className="checkout-card md:w-1/2 w-full border p-3">
+        <div className="container mx-auto flex flex-1 justify-center items-center mt-10 mb-10" >
+            <div className="checkout-card md:w-1/2 w-full border p-3 checkout-gradient shadow-md rounded-lg">
                 <div className="title text-center">
                     <h1 className="text-2xl" >
                         Checkout
                     </h1>
                 </div>
-                <div className="offer">
+                <div className="offer flex justify-center">
                     <OfferCardComponent item={state.checkout.offerData} />
                 </div>
                 <Formik initialValues={{}} onSubmit={(values: any) => {
-                    -
-                    store.dispatch(actions.setOrderData(values))
-                    router.push(`/payment/${state.checkout.paymentIntent.data.id}`)
+                        store.dispatch(actions.setOrderData(values))
+                        router.push(`/payment/${state.checkout.paymentIntent.data.id}`)
                 }} >
-                    <Form className="p-3" >
-                        <div className="contact-form border-b mt-5">
+                    <Form className="p-3 " >
+                        <div className="contact-form border-b mt-5 ">
                             <div className="title">
                                 <h2 className="text-xl" >
                                     Contact
@@ -61,6 +61,55 @@ export default function CheckoutContainer() {
                                         </div>
                                     ))
                                 }
+                            </div>
+                        </div>
+                        <div className="billingDetail mt-10">
+                            <h2 className="text-xl mb-5" >
+                                Billing Details
+                            </h2>
+                            <div className="relative overflow-x-auto">
+                                <table className="w-full text-sm text-gray-500 text-center ">
+                                    <thead className="text-xs text-gray-700 uppercase ">
+                                        <tr>
+                                            <th scope="col" className="px-6 py-3">
+                                                Currency
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Base Amount
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Tax Amount
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Fee Amount
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Total Amount
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr className="bg-white border-b text-center  ">
+                                            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                                {offerData.base_currency}
+                                            </th>
+                                            <td className="px-6 py-4">
+                                                {offerData.base_amount}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                {offerData.tax_amount}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                2.9%
+                                            </td>
+                                            <td className="font-bold italic" >
+                                                {
+                                                    ((offerData.total_amount + 10) / (1 - 0.029)).toFixed(2)
+                                                }
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <div className="save-button">

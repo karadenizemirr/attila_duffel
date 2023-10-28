@@ -17,7 +17,7 @@ export default function DetailContainer({ data, payment }: { data: any, payment:
                     Ticket
                 </h1>
             </div>
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 flex justify-center">
                 <OfferCardComponent item={data}>
                     <div className="detail">
                         <Link 

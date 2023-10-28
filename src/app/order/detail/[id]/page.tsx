@@ -17,7 +17,7 @@ const getOrder = async (id:string) => {
             body: JSON.stringify({id})
         })
 
-        const {order} = await res.json()
+        const order = await res.json()
 
         return order
 

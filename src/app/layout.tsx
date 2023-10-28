@@ -17,7 +17,7 @@ export default async function RootLayout({
   const session = await getServerSession();
   return (
     <html lang="en">
-      <body className='font-medium' >
+      <body className='font-medium font-display-swap' >
         <SessionProvider session={session} >
         <StoreProvider>
           <ToastContainer />

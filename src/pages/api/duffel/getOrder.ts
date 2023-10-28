@@ -9,7 +9,6 @@ export default async function getOrder(req:NextApiRequest, res:NextApiResponse){
         const {id} = req.body
 
         const {data} =await duffel.orders.get(id)
-
         return res.status(200).json({ok:true, data})
 
 

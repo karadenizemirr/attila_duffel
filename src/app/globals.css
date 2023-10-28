@@ -3,38 +3,49 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'poppins-regular';
-    src: url('../style/fonts/Poppins/Poppins-Regular.ttf');
+  font-family: 'poppins-regular';
+  src: url('../style/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'poppins-medium';
-    src: url('../style/fonts/Poppins/Poppins-Medium.ttf');
+  font-family: 'poppins-medium';
+  src: url('../style/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'poppins-bold';
-    src: url('../style/fonts/Poppins/Poppins-Bold.ttf');
+  font-family: 'poppins-bold';
+  src: url('../style/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'poppins-extrabold';
-    src: url('../style/fonts/Poppins/Poppins-ExtraBold.ttf');
+  font-family: 'poppins-extrabold';
+  src: url('../style/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'poppins-thin';
-    src: url('../style/fonts/Poppins/Poppins-Thin.ttf');
+  font-family: 'poppins-thin';
+  src: url('../style/fonts/Poppins/Poppins-Thin.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'poppins-italic';
-    src: url('../style/fonts/Poppins/Poppins-Italic.ttf');
+  font-family: 'poppins-italic';
+  src: url('../style/fonts/Poppins/Poppins-Italic.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'poppins-semibold';
-    src: url('../style/fonts/Poppins/Poppins-SemiBold.ttf');
+  font-family: 'poppins-semibold';
+  src: url('../style/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-display: swap;
+}
+
+* {
+    font-display: swap;
 }
 
 input {
@@ -78,6 +89,10 @@ li:not(:has(button)):hover::after {
 
 .custom-gradient {
   background: linear-gradient(100deg, #ffffff24 0%, #8EFFB9 50%, #ffffff24 100%);
+}
+
+.checkout-gradient {
+  background: linear-gradient(100deg, #ffffff14 0%, #8effb91c 50%, #ffffff12 100%);
 }
 .card-gradient {
     background: linear-gradient(100deg, #74747431 0%, #00000034 100%);

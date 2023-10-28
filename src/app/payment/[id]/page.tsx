@@ -11,7 +11,6 @@ export default function PaymentPage(){
     return (
         <div>
             <PaymentContainer />
-            
         </div>
     )
 }

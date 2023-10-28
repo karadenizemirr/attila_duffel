@@ -1,8 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    paymentId: '',
-    paymentStatus: false
+    orderId: ''
 }
 
 export const fetchPayment = createAsyncThunk('payment/fetchPayment', async (paymentData: any) => {
@@ -15,27 +14,20 @@ export const fetchPayment = createAsyncThunk('payment/fetchPayment', async (paym
         body: JSON.stringify(paymentData)
     })
 
-    const {ok} = await res.json()
+    const {ok, status, data} = await res.json()
 
-    if (ok) return true
+    console.log(data)
 
-    return false
+    return data
 })
 
 export const {actions, reducer} = createSlice({
     name: 'payment',
-    initialState: initialState,
-    reducers:{
-        setPaymentId: (state, action) => {
-            state.paymentId = action.payload
-        },
-        setPaymentStatus: (state, action) => {
-            state.paymentStatus = action.payload
-        }
-    },
+    initialState,
+    reducers:{},
     extraReducers: (builder) => {
         builder.addCase(fetchPayment.fulfilled, (state,action) => {
-            state.paymentStatus = action.payload
+            state.orderId = action.payload.id
         })
     }
 })

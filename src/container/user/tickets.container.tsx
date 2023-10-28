@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function TicketsContainer({ orders }: { orders?: any }) {
@@ -26,6 +27,9 @@ export default function TicketsContainer({ orders }: { orders?: any }) {
                                 <th scope="col" className="px-6 py-3">
                                     Price
                                 </th>
+                                <th scope="col" className="px-6 py-3">
+                                    Op.
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,6 +47,11 @@ export default function TicketsContainer({ orders }: { orders?: any }) {
                                         </td>
                                         <td className="px-6 py-4">
                                             {item.price}
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            <Link href={`/order/detail/${item.orderId}`} className="text-sm bg-black p-1 rounded-lg text-white hover:bg-gray-200 duration-200" >
+                                                Get Detail
+                                            </Link>
                                         </td>
                                     </tr>
                                 ))

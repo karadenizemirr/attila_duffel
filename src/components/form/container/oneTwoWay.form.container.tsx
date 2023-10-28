@@ -7,6 +7,7 @@ import InoutComponent from "../input";
 import { class_type } from "@/types/base.types";
 import { toast } from "react-toastify";
 import * as Yup from 'yup'
+import CurrencySelectComponent from "../currency.select";
 
 export default function OneTwoWatContainer() {
     const [spinner, setSpinner] = React.useState<boolean>(false)
@@ -24,7 +25,8 @@ export default function OneTwoWatContainer() {
                     deperature_date: "",
                     adult: "",
                     child: "",
-                    class_type: ""
+                    class_type: "",
+                    currency:""
 
                 }}
                 onSubmit={async (values: any) => {
@@ -119,6 +121,13 @@ export default function OneTwoWatContainer() {
                     <div className="row mt-5 flex flex-1 gap-3">
                         <Field name="adult" placeholder="Adult" component={InoutComponent} />
                         <Field name="child" placeholder="Child" component={InoutComponent} />
+                        <Field name="currency" >
+                            {({field,form}: {field:any, form:any}) => (
+                                <CurrencySelectComponent onchange={(val:string) => {
+                                    form.setFieldValue(field.name, val)
+                                }} />
+                            )}
+                        </Field>
                     </div>
 
                     <div className="row mt-5">

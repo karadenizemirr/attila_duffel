@@ -28,10 +28,13 @@ export default function NavbarComponent() {
         toast.success("Logout success");
         router.push("../");
     }
+    
     return (
         <div className="container mx-auto p-4 grid grid-cols-12 items-center" >
             <div className="col-span-6 sm:col-span-3">
-                <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413570/xfj2twvsxszkw9mbsimt.png" width={100} height={100} alt="logo" />
+                <Link href="/" >
+                    <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413570/xfj2twvsxszkw9mbsimt.png" width={100} height={100} alt="logo" />
+                </Link>
             </div>
             <div className="col-span-6 hidden sm:flex flex-1 justify-center items-center">
                 <ul className="flex flex-1 justify-center items-center gap-10" >
@@ -77,7 +80,7 @@ export default function NavbarComponent() {
                                 </li>
                                 <li >
                                     <Link href="/login" className="bg-secondary hover:bg-gray-200 p-2 px-6 flex gap-2 items-center duration-200 rounded-lg">
-                                        <FontAwesomeIcon icon={faSignInAlt} width={18} /> SignIn
+                                        <FontAwesomeIcon icon={faSignInAlt} width={18} /> Sign In
                                     </Link>
                                 </li>
                             </>
