@@ -104,7 +104,7 @@ export default function OneTwoWatContainer() {
                     <div className="row mt-5">
                         <Field name="class_type" >
                             {({ field, form }: { field: any, form: any }) => (
-                                <SelectComponent name="class_type" options={class_type} placeholder="Class"
+                                <SelectComponent name="class_type" options={class_type} placeholder="Class" defualt="economy"
                                     onchange={(val: string) => {
                                         form.setFieldValue(field.name, val)
                                     }}
@@ -121,13 +121,6 @@ export default function OneTwoWatContainer() {
                     <div className="row mt-5 flex flex-1 gap-3">
                         <Field name="adult" placeholder="Adult" component={InoutComponent} />
                         <Field name="child" placeholder="Child" component={InoutComponent} />
-                        <Field name="currency" >
-                            {({field,form}: {field:any, form:any}) => (
-                                <CurrencySelectComponent onchange={(val:string) => {
-                                    form.setFieldValue(field.name, val)
-                                }} />
-                            )}
-                        </Field>
                     </div>
 
                     <div className="row mt-5">

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SelectComponent({name,placeholder, onchange, field, options}: {name?:string, placeholder?:string, onchange?:(value:string) => void, field?:any, options?:any}) {
+export default function SelectComponent({name,placeholder, onchange, field, options, defualt}: {defualt?:string,name?:string, placeholder?:string, onchange?:(value:string) => void, field?:any, options?:any}) {
     
     const [select,setSelect] = React.useState<string>("");
 
@@ -16,6 +16,7 @@ export default function SelectComponent({name,placeholder, onchange, field, opti
             id={name} 
             className="border p-2 w-full rounded-lg" 
             onChange={handleChange}
+            defaultValue={defualt}
          >
             <option>
                 {placeholder}
