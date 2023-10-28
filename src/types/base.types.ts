@@ -1,6 +1,6 @@
 export const class_type = [
     {
-        name: 'Economy',
+        name: 'Economy Class',
         value: 'economy'
     },
     {
