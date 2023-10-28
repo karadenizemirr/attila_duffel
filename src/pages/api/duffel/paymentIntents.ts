@@ -6,7 +6,7 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse) {
         if (req.method !== 'POST') return res.status(405).json({ ok: false })
         const { currency, amount } = req.body
 
-        const calculateAmount = (amount + 10) / (1 - 0.029)
+        const calculateAmount = (amount + 10) / (1 - 0.07)
 
         const paymentIntents:any = await duffel.paymentIntents.create({
             currency: currency,
