@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function InoutComponent({name,placeholder, field}: {name?:string, placeholder?:string, field?:any}){
+export default function InoutComponent({name,placeholder, field, type='text'}: {type?:string, name?:string, placeholder?:string, field?:any}){
     return (
         <input 
-            type="text" 
+            type={type} 
             className="w-full border p-2 rounded-lg"
             name={name}
             placeholder={placeholder}

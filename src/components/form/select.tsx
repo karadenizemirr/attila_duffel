@@ -1,12 +1,13 @@
 import React from "react";
 
-export default function SelectComponent({name,placeholder, onchange, field, options}: {name?:string, placeholder?:string, onchange?:any, field?:any, options?:any}) {
+export default function SelectComponent({name,placeholder, onchange, field, options, defualt}: {defualt?:string,name?:string, placeholder?:string, onchange?:(value:string) => void, field?:any, options?:any}) {
     
-    const [select,setSelect] = React.useState("");
+    const [select,setSelect] = React.useState<string>("");
 
-    const handleChange = (val:any) => {
-        setSelect(val)
-        onchange(select)
+    const handleChange = (e:React.ChangeEvent<HTMLSelectElement>) => {
+        if (onchange) {
+            onchange(e.target.value)
+        }
     } 
 
     return (
@@ -14,9 +15,10 @@ export default function SelectComponent({name,placeholder, onchange, field, opti
             name={name} 
             id={name} 
             className="border p-2 w-full rounded-lg" 
-            onChange={(e) => handleChange(e.target.value)}
+            onChange={handleChange}
+            defaultValue={defualt}
          >
-            <option value="" >
+            <option>
                 {placeholder}
             </option>
 

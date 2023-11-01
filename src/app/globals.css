@@ -3,56 +3,116 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'poppins-regular';
-    src: url('../style/fonts/Poppins/Poppins-Regular.ttf');
+  font-family: 'poppins-regular';
+  src: url('../style/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'poppins-medium';
-    src: url('../style/fonts/Poppins/Poppins-Medium.ttf');
+  font-family: 'poppins-medium';
+  src: url('../style/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'poppins-bold';
-    src: url('../style/fonts/Poppins/Poppins-Bold.ttf');
+  font-family: 'poppins-bold';
+  src: url('../style/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'poppins-extrabold';
-    src: url('../style/fonts/Poppins/Poppins-ExtraBold.ttf');
+  font-family: 'poppins-extrabold';
+  src: url('../style/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'poppins-thin';
-    src: url('../style/fonts/Poppins/Poppins-Thin.ttf');
+  font-family: 'poppins-thin';
+  src: url('../style/fonts/Poppins/Poppins-Thin.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'poppins-italic';
-    src: url('../style/fonts/Poppins/Poppins-Italic.ttf');
+  font-family: 'poppins-italic';
+  src: url('../style/fonts/Poppins/Poppins-Italic.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'poppins-semibold';
-    src: url('../style/fonts/Poppins/Poppins-SemiBold.ttf');
+  font-family: 'poppins-semibold';
+  src: url('../style/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-display: swap;
+}
+
+* {
+    font-display: swap;
+}
+
+input {
+    background-color: rgba(128, 128, 128, 0.101);
+    border: #8EFFB9;
+}
+
+input:focus {
+    outline-color: black !important;
+}
+
+input::placeholder {
+    color: black !important;
+}
+
+select {
+    background-color: rgba(128, 128, 128, 0.101);
+    color: black;
+    border: #8EFFB9;
 }
 
 li:not(:has(button)) {
-  position: relative;
+    position: relative;
 }
 
 li:not(:has(button))::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 100%;
-  height: 2px;
-  background-color: #8EFFB9;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: #8EFFB9;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
 }
 
 li:not(:has(button)):hover::after {
-  transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.custom-gradient {
+  background: linear-gradient(100deg, #ffffff24 0%, #8EFFB9 50%, #ffffff24 100%);
+}
+
+.checkout-gradient {
+  background: linear-gradient(100deg, #ffffff14 0%, #8effb91c 50%, #ffffff12 100%);
+}
+.card-gradient {
+    background: linear-gradient(100deg, #74747431 0%, #00000034 100%);
+}
+
+.page-gradient {
+    background: linear-gradient(180deg, #ffffff31 0%, #92929234 100%);
+}
+
+.instagramColor {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

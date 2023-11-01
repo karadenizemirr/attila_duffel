@@ -5,6 +5,8 @@ const config: Config = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/container/**/*.{js,ts,jsx,tsx,mdx}'
+    
   ],
   theme: {
     extend: {
@@ -20,6 +22,7 @@ const config: Config = {
       colors: {
         primary: "#FFFAE0",
         secondary: "#8EFFB9",
+        tertiary: "#030c91",
       }
     },
   },
