@@ -18,7 +18,7 @@ export default function CareersPage() {
                         Careers at Kabanda
                     </h1>
                     <p className="mt-3" >
-                        At Kabanda, we're on a mission to make air travel simpler and more accessible for everyone. If you're passionate about travel, technology, and innovation, we want to hear from you. Join us in redefining the future of flight booking.
+                        At Kabanda, we&lsquo;re on a mission to make air travel simpler and more accessible for everyone. If you&lsquo;re passionate about travel, technology, and innovation, we want to hear from you. Join us in redefining the future of flight booking.
                     </p>
                 </div>
                 <div className="content text-center mt-10 mb-10">
@@ -29,7 +29,7 @@ export default function CareersPage() {
                     <ul className="mt-10">
                         <li>
                             <p>
-                                <span className="font-bold">Innovation</span> We're at the forefront of the travel industry, developing cutting-edge technology solutions to streamline the flight booking process and enhance the customer experience.
+                                <span className="font-bold">Innovation</span> We&lsquo;re at the forefront of the travel industry, developing cutting-edge technology solutions to streamline the flight booking process and enhance the customer experience.
                             </p>
                         </li>
                         <li>
@@ -98,8 +98,8 @@ export default function CareersPage() {
             </div>
             <div className="applyContent mx-auto container px-52 mt-10 text-center">
                 <p>
-                    Ready to embark on a journey with us? Send your resume and a cover letter to careers@kabanda.org with the subject line "Kabanda Career Application - [Your Desired Position]."
-                    We can't wait to hear from you and potentially welcome you aboard the Kabanda team. Your career in the travel industry starts here!
+                    Ready to embark on a journey with us? Send your resume and a cover letter to careers@kabanda.org with the subject line &lsquo;Kabanda Career Application - [Your Desired Position].&lsquo;
+                    We can&lsquo;t wait to hear from you and potentially welcome you aboard the Kabanda team. Your career in the travel industry starts here!
                 </p>
             </div>
         </div>

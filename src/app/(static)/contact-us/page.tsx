@@ -8,7 +8,7 @@ export default function ContactUs() {
                     Contact Us
                 </h1>
                 <p className="mt-5 w-1/3" >
-                    At Kabanda, we're here to assist you with any questions, concerns, or feedback you may have. Feel free to reach out to us using the following contact methods
+                    At Kabanda, we&lsquo;re here to assist you with any questions, concerns, or feedback you may have. Feel free to reach out to us using the following contact methods
                 </p>
             </div>
             <div className="contactCard mt-10 w-1/2">

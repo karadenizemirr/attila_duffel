@@ -19,7 +19,7 @@ export default function AdversitePage() {
                                 Reach a Global Audience: Kabanda attracts travelers from all over the world. By advertising with us, you can expose your brand to a diverse and international audience.
                             </li>
                             <li>
-                                Tailored Advertising Solutions: We offer a range of advertising options to suit your marketing goals, whether it's brand awareness, lead generation, or direct sales.
+                                Tailored Advertising Solutions: We offer a range of advertising options to suit your marketing goals, whether it&lsquo;s brand awareness, lead generation, or direct sales.
                             </li>
                             <li>
                                 Innovative Technology: Our platform utilizes cutting-edge technology to ensure your ads are seen by the right people at the right time.

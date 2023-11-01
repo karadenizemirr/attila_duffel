@@ -32,7 +32,7 @@ export default function Page() {
                         We take the security of your data seriously and employ industry-standard measures to protect it from unauthorized access, disclosure, or alteration. <br />
                         <span className="font-bold" >6. Cookies and Tracking Technologies</span><br />
                         We use cookies and similar technologies to enhance your browsing experience. You can manage your cookie preferences in your browser settings. <br />
-                        <span className="font-bold" >7. Children's Privacy</span><br />
+                        <span className="font-bold" >7. Children&lsquo;s Privacy</span><br />
                         Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children. <br />
                         <span className="font-bold" >8. Changes to this Policy</span><br />
                         We may update this policy from time to time. Any significant changes will be communicated through our website or by email. <br />

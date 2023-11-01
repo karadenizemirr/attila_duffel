@@ -8,12 +8,12 @@ export default function AffiliatesPage() {
                     Afilliates
                 </h1>
                 <p className="w-1/2 mt-5 text-center" >
-                    At Kabanda, we believe in building strong partnerships to provide our customers with the best flight booking experience. If you're interested in becoming an affiliate with us, here's how you can get involved and benefit from our program:
+                    At Kabanda, we believe in building strong partnerships to provide our customers with the best flight booking experience. If you&apos;re interested in becoming an affiliate with us, here&lsquo;s how you can get involved and benefit from our program:
                 </p>
                 <div className="content w-1/2 mt-10 text-center">
                     <ul className="flex flex-1 flex-col gap-3" >
                         <li>
-                            Earn Commission: Join our affiliate program to earn competitive commissions for every successful booking made through your referral. It's a great way to monetize your website or online presence.
+                            Earn Commission: Join our affiliate program to earn competitive commissions for every successful booking made through your referral. It&lsquo;s a great way to monetize your website or online presence.
                         </li>
                         <li>
                             User-Friendly Integration: We offer easy-to-implement integration options for your website or platform, allowing you to seamlessly link your users to Kabanda for flight bookings.
