@@ -27,7 +27,7 @@ export default function SearchFormComponent() {
                                 `}
                                 onClick={() => handleSelect("oneTwoWay")}
                             >
-                                One Way
+                                One Two Way
                             </button>
                         </li>
                         <li>
