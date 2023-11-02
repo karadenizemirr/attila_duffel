@@ -2,8 +2,8 @@ import React from "react";
 
 export default function ContactUs() {
     return (
-        <div className="w-full min-h-[70vh] mt-10 flex flex-col items-center" >
-            <div className="title text-center flex flex-col items-center" >
+        <div className="w-full min-h-[70vh] flex flex-col items-center mt-20 mb-20" >
+            <div className="title text-left flex flex-col items-center" >
                 <h1 className="text-4xl font-bold" >
                     Contact Us
                 </h1>
@@ -57,7 +57,7 @@ export default function ContactUs() {
                     <span className="text-sm italic" >
                         Address
                         </span>
-                        <span className="text-sm text-center" >
+                        <span className="text-sm text-left" >
                         Headquarters 123 Skyway Street Cityville, CA 12345 UA
                         </span>
                     </li>

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AdversitePage() {
     return (
-        <div className="min-h-[70vh] w-full" >
+        <div className="min-h-[70vh] w-full mt-20 mb-20" >
             <div className="title text-center mt-10 mb-10">
                 <h1 className="text-4xl font-bold" >
                     Advertise with Kabanda
@@ -10,11 +10,11 @@ export default function AdversitePage() {
             </div>
             <div className="content grid grid-cols-12 mx-auto container">
                 <div className="col-span-6 flex flex-1 justify-center p-5 items-center">
-                    <div className="content text-center">
+                    <div className="content text-left">
                         <h1 className="text-xl" >
                             Why Advertise with Kabanda?
                         </h1>
-                        <ul className="flex flex-1 flex-col items-center gap-6 mt-5 justify-center text-center" >
+                        <ul className="flex flex-1 flex-col items-center gap-6 mt-5 justify-center text-left" >
                             <li>
                                 Reach a Global Audience: Kabanda attracts travelers from all over the world. By advertising with us, you can expose your brand to a diverse and international audience.
                             </li>
@@ -28,11 +28,11 @@ export default function AdversitePage() {
                     </div>
                 </div>
                 <div className="col-span-6 flex flex-1 justify-center bg-gray-100 p-5 rounded-lg">
-                    <div className="content text-center">
+                    <div className="content text-left">
                         <h1 className="text-xl" >
                             Explore the advertising opportunities at Kabanda
                         </h1>
-                        <ul className="flex flex-1 flex-col items-center gap-6 mt-5 justify-center text-center" >
+                        <ul className="flex flex-1 flex-col items-center gap-6 mt-5 justify-center text-left" >
                             <li>
                                 Display Ads: Prominently showcase your brand through banner and display advertisements on our website. These ads ensure high visibility and brand recognition.
                             </li>
@@ -49,7 +49,7 @@ export default function AdversitePage() {
                     </div>
                 </div>
             </div>
-            <div className="footer text-center mt-10 container mx-auto">
+            <div className="footer text-left mt-10 container mx-auto">
                 <h1 className="text-4xl font-bold" >
                     Get in Touch
                 </h1>

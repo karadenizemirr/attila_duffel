@@ -116,3 +116,7 @@ li:not(:has(button)):hover::after {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.react-datepicker__header{
+  background-color: #8EFFB9 !important;
+}

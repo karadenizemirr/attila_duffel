@@ -6,7 +6,7 @@ export default function SelectComponent({name,placeholder, onchange, field, opti
 
     const handleChange = (e:React.ChangeEvent<HTMLSelectElement>) => {
         if (onchange) {
-            onchange(e.target.value)
+            onchange(e.target.value);
         }
     } 
 

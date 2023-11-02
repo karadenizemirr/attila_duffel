@@ -2,15 +2,15 @@ import React from "react";
 
 export default function AffiliatesPage() {
     return (
-        <div className="w-full min-h-[80vh] flex flex-1 justify-center items-center mt-10">
+        <div className="w-full min-h-[80vh] flex flex-1 justify-center items-center mt-20 b-20">
             <div className="title flex flex-1 flex-col justify-center items-center">
                 <h1 className="text-6xl font-bold" >
                     Afilliates
                 </h1>
-                <p className="w-1/2 mt-5 text-center" >
+                <p className="w-1/2 mt-5 text-left" >
                     At Kabanda, we believe in building strong partnerships to provide our customers with the best flight booking experience. If you&apos;re interested in becoming an affiliate with us, here&lsquo;s how you can get involved and benefit from our program:
                 </p>
-                <div className="content w-1/2 mt-10 text-center">
+                <div className="content w-1/2 mt-10 text-left">
                     <ul className="flex flex-1 flex-col gap-3" >
                         <li>
                             Earn Commission: Join our affiliate program to earn competitive commissions for every successful booking made through your referral. It&lsquo;s a great way to monetize your website or online presence.
@@ -39,7 +39,7 @@ export default function AffiliatesPage() {
 
                     </ul>
                 </div>
-                <div className="footer w-1/2 text-center mt-10 mb-10 text-gray-400 italic">
+                <div className="footer w-1/2 text-left mt-10 mb-10 text-gray-400 italic">
                     <p>
                         Join the Kabanda affiliate program and become a part of our growing network. Start earning commissions and providing your audience with a reliable flight booking solution. Contact us at affiliates@kabanda.org to get started. We look forward to partnering with you!
                     </p>

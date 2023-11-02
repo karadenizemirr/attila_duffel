@@ -20,7 +20,6 @@ const getOffer = async (id:string) => {
         return data
 
     }catch(err){
-        console.log(err)
         return []
     }
 }

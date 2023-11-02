@@ -22,7 +22,7 @@ export default function OneTwoWatContainer() {
                 initialValues={{
                     origin: "",
                     destination: "",
-                    deperature_date: "",
+                    departure_date: "",
                     adult: "",
                     child: "",
                     class_type: "",
@@ -30,6 +30,9 @@ export default function OneTwoWatContainer() {
 
                 }}
                 onSubmit={async (values: any) => {
+
+                    if (values.class_type === "") values.class_type = 'economy'
+                    else values.class_type = values.class_type
 
                     const res = await fetch('/api/duffel/oneTwoWay', {
                         method: 'POST',
@@ -90,7 +93,8 @@ export default function OneTwoWatContainer() {
                             {({ field, form }: { field: any, form: any }) => (
                                 <DatepickerComponent name="departure_date" placeholder="Departure Date" onchange={(val: any) => {
                                     form.setFieldValue(field.name, val)
-                                }} {...field} />
+                                    console.log(val)
+                                }}/>
                             )}
                         </Field>
                         <ErrorMessage name="departure_date" >

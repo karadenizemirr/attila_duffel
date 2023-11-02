@@ -8,33 +8,26 @@ export default function DatepickerComponent({name, placeholder, onchange}: {name
     const [date,setDate] = React.useState();
 
     const handleChange = (val:any) => {
-        setDate(val)
-        onchange(date)
+        onchange(val)
+        setDate(val);
     }
     return (
         <div>
-            <DatePicker 
-                name={name} 
-                showIcon
-                icon={
-                    <FontAwesomeIcon icon={faCalendarAlt} className="text-gray-400" />
-                }
-                placeholderText={placeholder}
-                selected={date}
-                onChange={(val:any) => handleChange(val)}
-                withPortal={true}
-                highlightDates={[new Date()]}
-                className="border border-gray-200 p-2 rounded-lg w-full"
-                autoComplete="off"
-                showTimeSelect
-                timeFormat="HH:mm"
-                timeIntervals={15}
-                timeCaption="Saat"
-                dateFormat="dd/MM/yyyy HH:mm"
-
-                
-
-                />
+            <DatePicker
+              name={name}
+              showIcon
+              icon={
+                <FontAwesomeIcon icon={faCalendarAlt} className="text-gray-400" />
+              }
+              placeholderText={placeholder}
+              selected={date}
+              onChange={(val: any) => handleChange(val)}
+              withPortal={true}
+              highlightDates={[new Date()]}
+              className="border border-gray-200 p-2 rounded-lg w-full"
+              autoComplete="off"
+              dateFormat="dd/MM/yyyy"
+            />
         </div>
     )
 }

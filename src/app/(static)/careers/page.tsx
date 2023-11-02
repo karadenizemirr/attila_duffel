@@ -13,7 +13,7 @@ export default function CareersPage() {
                 </h1>
             </div>
             <div className="content mx-auto container px-52 mt-20">
-                <div className="title text-center">
+                <div className="title text-left">
                     <h1 className="text-3xl font-bold" >
                         Careers at Kabanda
                     </h1>
@@ -21,7 +21,7 @@ export default function CareersPage() {
                         At Kabanda, we&lsquo;re on a mission to make air travel simpler and more accessible for everyone. If you&lsquo;re passionate about travel, technology, and innovation, we want to hear from you. Join us in redefining the future of flight booking.
                     </p>
                 </div>
-                <div className="content text-center mt-10 mb-10">
+                <div className="content text-left mt-10 mb-10">
                     <h2 className="text-2xl font-bold" >
                         <span className="text-4xl" >W</span>hy Kabanda ?
                     </h2>
@@ -54,7 +54,7 @@ export default function CareersPage() {
                         </li>
                     </ul>
                 </div>
-                <div className="content text-center mt-10 mb-10">
+                <div className="content text-left mt-10 mb-10">
                     <h2 className="text-2xl font-bold mb-10" >
                         Available Position
                     </h2>
@@ -96,7 +96,7 @@ export default function CareersPage() {
                     How To Apply
                 </h1>
             </div>
-            <div className="applyContent mx-auto container px-52 mt-10 text-center">
+            <div className="applyContent mx-auto container px-52 mt-10 text-left">
                 <p>
                     Ready to embark on a journey with us? Send your resume and a cover letter to careers@kabanda.org with the subject line &lsquo;Kabanda Career Application - [Your Desired Position].&lsquo;
                     We can&lsquo;t wait to hear from you and potentially welcome you aboard the Kabanda team. Your career in the travel industry starts here!

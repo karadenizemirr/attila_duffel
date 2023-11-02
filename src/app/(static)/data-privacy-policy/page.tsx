@@ -2,12 +2,12 @@ import React from "react";
 
 export default function Page() {
     return (
-        <div className="min-h-[80vh] flex flex-col items-center justify-center mb-10" >
-            <div className="content w-1/2 text-center">
-                <h1 className="text-4xl font-bold text-center mt-10" >
+        <div className="min-h-[80vh] flex flex-col items-center justify-center mt-20 mb-20" >
+            <div className="content w-1/2 text-left">
+                <h1 className="text-4xl font-bold text-left mt-10" >
                     Kabanda Data Privacy Policy
                 </h1>
-                <div className="content text-center mt-5">
+                <div className="content text-left mt-5">
                     <p className="text-left">
                         <span className="font-bold">1. Information We Collect</span><br />
                         <span>We collect the following types of information to provide you with the best flight booking experience:</span><br />
