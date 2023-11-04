@@ -68,7 +68,7 @@ export default function FooterComponent() {
                     <div className="col-span-6">
                         © 2023 <span className="text-secondary" >karabanda.org</span>
                     </div>
-                    <div className="payment flex gap-3">
+                    <div className="payment flex flex-wrap items-center justify-center gap-3">
                     <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413633/smmox3wvfb5srks5kdlf.svg" width={110} height={50} alt="stripe" />
                         <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413634/tz5o1opcjn6kvik7vkfl.svg" width={90} height={50} alt="stripe" />
                         <Image src="https://res.cloudinary.com/dssep9ze1/image/upload/v1698413631/brvkoxsme9eyyzkg5s2d.svg" width={60} height={50} alt="stripe" />
