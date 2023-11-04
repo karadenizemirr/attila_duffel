@@ -87,7 +87,7 @@ export default function OffersContainer({ data }: { data?: any }) {
                 </h1>
             </div>
             <div className="content grid grid-cols-12 mt-10 mb-10 relative">
-                <div className="sidebar col-span-3 border w-full p-4 rounded-lg mt-10">
+                <div className="sidebar col-span-12 lg:col-span-3 border w-full p-4 rounded-lg mt-10">
                     <div className="filters mt-10 mb-10 border p-3 rounded-lg shadow-sm grid grid-cols-12">
                         <div className="search col-span-12">
                             <h1 className="text-center mt-2 mb-2">
@@ -134,7 +134,7 @@ export default function OffersContainer({ data }: { data?: any }) {
                         </div>
                     </div>
                 </div>
-                <div className="cardContainer  col-span-9">
+                <div className="cardContainer col-span-12 lg:col-span-9">
                     <div className="mt-10 text-center flex flex-col items-center justify-center">
                         {
                             filteredData?.map((item: any, index: number) => (
