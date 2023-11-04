@@ -12,6 +12,7 @@ export default function OffersContainer({ data }: { data?: any }) {
 
     const [startPrice, setStartPrice] = useState("")
     const [endPrice, setEndPrice] = useState("")
+    const [isStops, setIsStops] = useState<string>("")
 
     useEffect(() => {
         if (spinner && spinner >= 0) {
@@ -41,7 +42,16 @@ export default function OffersContainer({ data }: { data?: any }) {
             if (filteredPrice) setFilteredData(filteredPrice)
             else setFilteredData(data)
         }
-    }, [spinner, data, searchInput, startPrice, endPrice])
+
+        if (isStops){
+            const filteredStops = data.filter((item: any) => {
+                return String(item.slices[0].segments[0].stops.length) === isStops
+              });
+
+            if (filteredStops) setFilteredData(filteredStops)
+            else setFilteredData(data)
+        }
+    }, [spinner, data, searchInput, startPrice, endPrice, isStops])
 
 
     const owners = data.reduce((acc: any, item: any) => {
@@ -51,6 +61,13 @@ export default function OffersContainer({ data }: { data?: any }) {
 
         return Array.from(list);
     }, []);
+
+    const stops =  data.reduce((acc:any, item:any) => {
+        const list: Set<string> = new Set(acc)
+        list.add(item.slices[0].segments[0].stops.length)
+
+        return Array.from(list)
+    }, [])
 
 
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -78,9 +95,9 @@ export default function OffersContainer({ data }: { data?: any }) {
     }
 
     return (
-        <div className="container mx-auto" >
-            <div className="title text-center mt-10">
-                <h1 className="text-4xl font-bold border-b rounded-full p-2" >
+        <div className="container mx-auto border-2 rounded-xl p-5 mb-20 mt-20 bg-gradient-to-b from-blue-50" >
+            <div className="title text-center">
+                <h1 className="text-4xl font-bold rounded-full p-2" >
                     Results
                 </h1>
             </div>
@@ -115,6 +132,26 @@ export default function OffersContainer({ data }: { data?: any }) {
                         </h1>
                         <div className="row flex flex-1 gap-3">
                             <input type="text" placeholder="Hours" className="form-element" onChange={handleSearchHours} />
+                        </div>
+                    </div>
+                    <div className="stops">
+                        <h1 className="text-center mt-2 mb-2">
+                            Stops
+                        </h1>
+                        <div className="row">
+                            <select name="" id="" className="form-element" onChange={(e:any) => {
+                                setIsStops(e.target.value)
+                            }}>
+                                {
+                                    stops.map((item:any, index:number) => (
+                                        <option value={item} key={index}>
+                                            {
+                                                isStops === "0" ? 'Transfer': 'Directly'
+                                            }
+                                        </option>
+                                    ))
+                                }
+                            </select>
                         </div>
                     </div>
                 </div>
