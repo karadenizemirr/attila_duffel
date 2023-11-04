@@ -44,6 +44,12 @@
   font-display: swap;
 }
 
+@layer components {
+  .form-element {
+    @apply w-full p-2 rounded-lg
+  }
+}
+
 * {
     font-display: swap;
 }
