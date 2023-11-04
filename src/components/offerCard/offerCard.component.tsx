@@ -1,9 +1,11 @@
+import { calculateCurrency } from "@/lib/currency";
 import { dateParser } from "@/lib/parser";
+import { store } from "@/redux";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import React from "react";
 
 export default function OfferCardComponent({ item, children }: { item: any, children?:React.ReactNode }) {
+    
     const departing_date = item.slices[0].segments[0].departing_at
     const arriving_date = item.slices[0].segments[0].arriving_at
 
@@ -77,13 +79,15 @@ export default function OfferCardComponent({ item, children }: { item: any, chil
                         </div>
                     )
                 }
-                <div className="detail-card mt-5">
+                <div className="detail-card mt-5 ">
                     <div className="topbar flex flex-1 justify-between">
                         <span className="text-sm font-italic" >
                             {item.owner.name}
                         </span>
                         <span className="font-bold">
-                            {item.base_amount}-<span className="font-bold italic" >{item.base_currency}</span>
+                            {
+                                item?.new_amount
+                            }-<span className="font-bold italic" >{item?.new_currency ||item.base_currency}</span>
                         </span>
                     </div>
                 </div>
@@ -91,14 +95,10 @@ export default function OfferCardComponent({ item, children }: { item: any, chil
                     <div className="flex flex-1 justify-between items-center">
                         <div className="price">
                             <h1 className="text-xl text-black font-bold" >
-                                {item.base_amount}-<span className="font-bold italic" >{item.base_currency}</span>
+                                {item?.new_amount} - <span className="font-bold italic" >{item?.new_currency ||item.base_currency}</span>
                             </h1>
                         </div>
-                        <div className="class">
-                            <span className="font-italic text-sm rounded-full bg-gray-200 p-1" >
-                                {item.slices[0].segments[0].passengers[0].cabin_class_marketing_name}
-                            </span>
-                        </div>
+                        
                         {/* <div className="detail">
                             <Link href={`/offers/detail/` + item.id} className="bg-secondary p-2 rounded-lg hover:bg-gray-200 duration-200" onClick={handleSelectOffer} >
                                 Select

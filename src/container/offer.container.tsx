@@ -1,10 +1,8 @@
 "use client"
 import OfferCardComponent from "@/components/offerCard/offerCard.component";
-import SiderbarComponent from "@/components/siderbar/siderbar.component";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { start } from "repl";
 
 export default function OffersContainer({ data }: { data?: any }) {
     const [spinner, setSpinner] = useState<number>();
@@ -88,20 +86,6 @@ export default function OffersContainer({ data }: { data?: any }) {
             </div>
             <div className="content grid grid-cols-12 mt-10 mb-10 relative">
                 <div className="sidebar col-span-12 lg:col-span-3 border w-full p-4 rounded-lg mt-10">
-                    <div className="filters mt-10 mb-10 border p-3 rounded-lg shadow-sm grid grid-cols-12">
-                        <div className="search col-span-12">
-                            <h1 className="text-center mt-2 mb-2">
-                                Dynamic Search
-                            </h1>
-                            <input
-                                type="text"
-                                className="form-element w-full p-2 rounded-lg text-sm"
-                                placeholder="Search Keyword"
-                                value={searchInput}
-                                onChange={handleSearchChange}
-                            />
-                        </div>
-                    </div>
                     <div className="title">
                         <h1 className="text-center mt-2 mb-2" >
                             Brand Name
@@ -140,7 +124,7 @@ export default function OffersContainer({ data }: { data?: any }) {
                             filteredData?.map((item: any, index: number) => (
                                 <OfferCardComponent key={index} item={item}>
                                     <div className="detail">
-                                        <Link href={`/offers/detail/` + item.id} className="bg-secondary p-2 rounded-lg hover:bg-gray-200 duration-200" onClick={() => setSpinner(index)}>
+                                        <Link href={`/offers/detail/${item.id}?currencyCode=${item?.new_currency}`} className="bg-secondary p-2 rounded-lg hover:bg-gray-200 duration-200" onClick={() => setSpinner(index)}>
                                             {spinner === index ? (
 
                                                 <span>

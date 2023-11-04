@@ -6,7 +6,6 @@ export default async function POST(req:NextApiRequest, res:NextApiResponse){
     try{
         if (req.method !== 'POST') return res.status(405).json({ok: false, error: 'Method not allowed'})
         const data = req.body
-
         const duffel = new Duffel(
             {
                 token: process.env.NEXT_PUBLIC_DUFFEL_API_KEY as string
@@ -27,7 +26,6 @@ export default async function POST(req:NextApiRequest, res:NextApiResponse){
         })
         return res.status(200).json({ok: true, id: offerRequest.data.id})
     }catch(err){
-
         console.log(err)
         return res.status(500).json({ok: false})
     }

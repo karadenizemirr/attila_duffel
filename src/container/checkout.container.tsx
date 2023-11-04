@@ -91,7 +91,7 @@ export default function CheckoutContainer() {
                                     <tbody>
                                         <tr className="bg-white border-b text-center  ">
                                             <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                                {offerData.base_currency}
+                                                {offerData.new_currency}
                                             </th>
                                             <td className="px-6 py-4">
                                                 {offerData.base_amount}
@@ -104,7 +104,7 @@ export default function CheckoutContainer() {
                                             </td>
                                             <td className="font-bold italic" >
                                                 {
-                                                    ((offerData.total_amount + 10) / (1 - 0.029)).toFixed(2)
+                                                    ((offerData.new_amount + 10) / (1 - 0.029)).toFixed(2)
                                                 }
                                             </td>
                                         </tr>

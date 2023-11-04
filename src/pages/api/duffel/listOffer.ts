@@ -4,7 +4,6 @@ import { NextApiRequest, NextApiResponse } from "next";
 export default async function GET(req:NextApiRequest, res:NextApiResponse){
     try{
         if (req.method !== 'GET') return res.status(405).json({ok: false, message: 'Method not allowed'})
-
         const {id} = req.query
 
         const {data} = await duffel.offers.list({

@@ -1,6 +1,7 @@
 import DetailContainer  from "@/container/detail.container";
 import React from "react";
 import { Metadata } from "next";
+import { fetchCalculateCurrency } from "../../[id]/page";
 export const metadata:Metadata = {
     title: 'Offer - KABANDA',
     description: 'Register'
@@ -47,9 +48,13 @@ const getPaymentIntent = async (amount:string, currency:string) => {
     }
 }
 
-const OrderDetailPage = async ({params}: {params: {id:string}}) => {
+const OrderDetailPage = async ({params,searchParams}: {params: {id:string}, searchParams: {currencyCode: string}}) => {
     const data = await getOffer(params.id)
-    const paymentIntent = await getPaymentIntent(data.total_amount, data.total_currency)
+    const amount = await fetchCalculateCurrency(searchParams.currencyCode||'GBP', data.base_amount)
+    data.new_amount = amount
+    data.new_currency = searchParams.currencyCode
+
+    const paymentIntent = await getPaymentIntent(amount, searchParams.currencyCode)
 
     return (
         <div>

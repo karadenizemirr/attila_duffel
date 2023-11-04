@@ -4,14 +4,13 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import DatepickerComponent from "../datepicker";
 import SelectComponent from "../select";
 import InoutComponent from "../input";
-import { class_type } from "@/types/base.types";
+import { class_type, currency_tpye } from "@/types/base.types";
 import { toast } from "react-toastify";
-import * as Yup from 'yup'
 import CurrencySelectComponent from "../currency.select";
 
 export default function OneTwoWatContainer() {
     const [spinner, setSpinner] = React.useState<boolean>(false)
-
+    const [currency, setCurrency] = React.useState<string>('USD')
     const handleSpinner = () => {
         setSpinner(!spinner)
     }
@@ -25,9 +24,7 @@ export default function OneTwoWatContainer() {
                     departure_date: "",
                     adult: "",
                     child: "",
-                    class_type: "",
-                    currency:""
-
+                    class_type: ""
                 }}
                 onSubmit={async (values: any) => {
 
@@ -46,7 +43,7 @@ export default function OneTwoWatContainer() {
 
                     if (ok) {
                         setSpinner(false)
-                        window.location.href = `/offers/${id}`
+                        window.location.href = `/offers/${id}?currrencyCode=${currency}`
                     } else {
                         toast.error("Something went wrong")
                         setSpinner(false)
@@ -93,8 +90,7 @@ export default function OneTwoWatContainer() {
                             {({ field, form }: { field: any, form: any }) => (
                                 <DatepickerComponent name="departure_date" placeholder="Departure Date" onchange={(val: any) => {
                                     form.setFieldValue(field.name, val)
-                                    console.log(val)
-                                }}/>
+                                }} />
                             )}
                         </Field>
                         <ErrorMessage name="departure_date" >
@@ -125,6 +121,21 @@ export default function OneTwoWatContainer() {
                     <div className="row mt-5 flex flex-1 gap-3">
                         <Field name="adult" placeholder="Adult" component={InoutComponent} />
                         <Field name="child" placeholder="Child" component={InoutComponent} />
+                        {/* <SelectComponent 
+                            name="currency"
+                            options={currency_tpye}
+                            defualt="USD" 
+                            placeholder="Select Currency"
+                            onchange={(e:any) => {
+                                setCurrency(e.target.value)
+                            }}
+                        /> */}
+                        
+                    </div>
+                    <div className="row mt-5">
+                        <CurrencySelectComponent onchange={(e:any) => {
+                            setCurrency(e)
+                        }} />
                     </div>
 
                     <div className="row mt-5">

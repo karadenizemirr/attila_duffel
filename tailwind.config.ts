@@ -23,6 +23,7 @@ const config: Config = {
         primary: "#FFFAE0",
         secondary: "#8EFFB9",
         tertiary: "#030c91",
+        bg:'#1d67cd'
       }
     },
   },
